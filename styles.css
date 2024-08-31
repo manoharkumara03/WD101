@@ -1,1 +1,85 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white; 
+
+:root {
+    --neon-green: #5ccf47;
+    --neon-green-dark: #14b329;
+}
+
+input, button {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 1rem;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+
+input {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9; 
+    color: #333; 
+}
+
+input:focus {
+    border-color: var(--neon-green);
+    box-shadow: 0 0 0 0.2rem rgba(59, 254, 26, 0.23);
+}
+
+button {
+    background-color: var(--neon-green); 
+    color: white; 
+    border: none;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--neon-green-dark); 
+    transform: scale(1.04);
+}
+
+.bg-gray-800 {
+    background-color: #f0f0f0; 
+
+.text-gray-100 {
+    color: #333; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--neon-green); 
+    color: white; 
+}
+
+tr:hover {
+    background-color: #f0f0f0; 
+    color: #333; 
+}
+
+.hidden {
+    display: none;
+}
+
+.error-message {
+    color: #ff4d4d; 
+    margin-bottom: 10px;
+}
+
+.success-message {
+    color: var(--neon-green); 
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
 
