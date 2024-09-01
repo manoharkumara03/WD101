@@ -1,85 +1,57 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: white; 
-
-:root {
-    --neon-green: #5ccf47;
-    --neon-green-dark: #14b329;
+    font-family: Arial, sans-serif;
+    margin: 20px;
 }
 
-input, button {
-    width: 100%;
-    padding: 13px;
-    margin-bottom: 1rem;
-    border-radius: 7px;
-    box-sizing: border-box;
+h1, h2 {
+    color: #333;
 }
 
-input {
-    border: 1px solid #ccc;
-    background-color: #f9f9f9; 
-    color: #333; 
+form {
+    margin-bottom: 20px;
 }
 
-input:focus {
-    border-color: var(--neon-green);
-    box-shadow: 0 0 0 0.2rem rgba(59, 254, 26, 0.23);
+label {
+    display: inline-block;
+    width: 150px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
 }
 
 button {
-    background-color: var(--neon-green); 
-    color: white; 
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
     border: none;
-    transition: background-color 0.4s ease, transform 0.3s ease;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: var(--neon-green-dark); 
-    transform: scale(1.04);
-}
-
-.bg-gray-800 {
-    background-color: #f0f0f0; 
-
-.text-gray-100 {
-    color: #333; 
+    background-color: #45a049;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 1rem;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
 }
 
 th, td {
-    padding: 12px;
+    padding: 8px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
 }
 
 th {
-    background-color: var(--neon-green); 
-    color: white; 
+    background-color: #f2f2f2;
 }
-
-tr:hover {
-    background-color: #f0f0f0; 
-    color: #333; 
-}
-
-.hidden {
-    display: none;
-}
-
-.error-message {
-    color: #ff4d4d; 
-    margin-bottom: 10px;
-}
-
-.success-message {
-    color: var(--neon-green); 
-    margin-bottom: 10px;
-    text-align: center;
-    font-weight: bold;
-}
-
