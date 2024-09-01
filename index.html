@@ -4,33 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .table-container {
+            margin-top: 40px;
+            width: 100%;
+            max-width: 800px;
+        }
+        .table-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            color: #555;
+        }
+        th {
+            background-color: #f8f9fa;
+        }
+    </style>
 </head>
 <body>
-    <h1>Registration Form</h1>
+
+<div class="form-container">
+    <h2>Registration Form</h2>
     <form id="registrationForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
 
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" required><br>
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
 
-        <label for="terms">
+        <div>
             <input type="checkbox" id="terms" name="terms" required>
-            Accept terms and conditions
-        </label><br>
-
-        <button type="submit">Register</button>
+            <label for="terms">Accept Terms & Conditions</label>
+        </div>
+        <button type="submit">Submit</button>
     </form>
+</div>
 
-    <h2>Registered Users</h2>
-    <table>
+<div class="table-container">
+    <h2>Entries</h2>
+    <table id="entriesTable">
         <thead>
             <tr>
                 <th>Name</th>
@@ -40,11 +125,12 @@
                 <th>Accepted Terms?</th>
             </tr>
         </thead>
-        <tbody id="entries">
-      
+        <tbody>
+            <!-- Entries will appear here -->
         </tbody>
     </table>
+</div>
 
-    <script src="index.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
