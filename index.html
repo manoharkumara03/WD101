@@ -1,94 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <link href="styles.css" rel="stylesheet">
-    <script src="index.js" defer></script>
-  </head>
-  <body class="bg-gray-900 text-gray-100">
-    <header class="text-center py-4">
-      <h1 class="text-5xl font-extrabold text-neon-green">User Registration</h1>
-    </header>
-    <main class="flex flex-col items-center justify-center min-h-screen p-6">
-      <section class="bg-gray-800 p-8 rounded-lg shadow-lg max-w-lg w-full mb-6">
-        <h2 class="text-4xl font-bold text-center mb-6">Registration Form</h2>
-        <form id="user-form" novalidate>
-          <div class="mb-4">
-            <label for="name" class="block text-lg font-semibold mb-2">Name</label>
-            <input
-              required
-              type="text"
-              id="name"
-              name="name"
-              class="w-full bg-gray-700 text-gray-200 border border-gray-600 rounded-lg px-4 py-2 focus:border-neon-green focus:ring focus:ring-neon-green focus:ring-opacity-50"
-              placeholder="Enter full name"
-            />
-            <small class="text-red-500 hidden" id="name-error">Name is required.</small>
-          </div>
-          <div class="mb-4">
-            <label for="email" class="block text-lg font-semibold mb-2">Email</label>
-            <input
-              required
-              type="email"
-              id="email"
-              name="email"
-              class="w-full bg-gray-700 text-gray-200 border border-gray-600 rounded-lg px-4 py-2 focus:border-neon-green focus:ring focus:ring-neon-green focus:ring-opacity-50"
-              placeholder="Enter email"
-            />
-            <small class="text-red-500 hidden" id="email-error">Please enter a valid email.</small>
-          </div>
-          <div class="mb-4">
-            <label for="password" class="block text-lg font-semibold mb-2">Password</label>
-            <input
-              required
-              type="password"
-              id="password"
-              name="password"
-              class="w-full bg-gray-700 text-gray-200 border border-gray-600 rounded-lg px-4 py-2 focus:border-neon-green focus:ring focus:ring-neon-green focus:ring-opacity-50"
-              placeholder="Enter password"
-            />
-            <meter max="4" id="password-strength-meter" class="w-full h-2 bg-gray-600 mt-2"></meter>
-            <small class="text-red-500 hidden" id="password-error">Password is required.</small>
-          </div>
-          <div class="mb-4">
-            <label for="dob" class="block text-lg font-semibold mb-2">Date of Birth</label>
-            <input
-              required
-              type="date"
-              id="dob"
-              name="dob"
-              class="w-full bg-gray-700 text-gray-200 border border-gray-600 rounded-lg px-4 py-2 focus:border-neon-green focus:ring focus:ring-neon-green focus:ring-opacity-50"
-            />
-            <small class="text-red-500 hidden" id="dob-error">Please enter a valid date of birth.</small>
-          </div>
-          <div class="flex items-center mb-4">
-            <input
-              required
-              type="checkbox"
-              id="acceptTerms"
-              name="acceptTerms"
-              class="w-5 h-5 bg-gray-700 border-gray-600 rounded-lg mr-2"
-            />
-            <label for="acceptTerms" class="text-lg font-semibold">Accept Terms & Conditions</label>
-            <small class="text-red-500 hidden ml-2" id="terms-error">You must accept the terms and conditions.</small>
-          </div>
-          <button
-            type="submit"
-            class="w-full py-3 bg-neon-green text-white rounded-lg hover:bg-neon-green-dark"
-          >
-            Submit
-          </button>
-          <div id="form-success" class="hidden mt-4 text-green-500 text-center font-semibold">Form submitted successfully!</div>
-        </form>
-      </section>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form id="registrationForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
 
-      <section class="bg-gray-800 p-8 rounded-lg shadow-lg max-w-lg w-full">
-        <h2 class="text-3xl font-bold text-center mb-4">Entries</h2>
-        <div id="user-entries"></div>
-      </section>
-    </main>
-  </body>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br>
+
+        <label for="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            Accept terms and conditions
+        </label><br>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <h2>Registered Users</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Date of Birth</th>
+                <th>Accepted Terms?</th>
+            </tr>
+        </thead>
+        <tbody id="entries">
+      
+        </tbody>
+    </table>
+
+    <script src="index.js"></script>
+</body>
 </html>
